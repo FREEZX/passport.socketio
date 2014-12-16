@@ -1,11 +1,14 @@
-# passport.socketio
-> Access [passport.js](http://passportjs.org) user information from a [socket.io](http://socket.io) connection.
+NOTE:
+THE README IS NOT UPDATED, THIS IS A FORK OF PASSPORT-SOCKET.IO!
+
+# passport.primus
+> Access [passport.js](http://passportjs.org) user information from a primus connection.
 
 
 ## Installation
 
 ```
-npm install passport.socketio
+npm install passport.primus
 ```
 
 ## Example usage
@@ -16,7 +19,7 @@ npm install passport.socketio
 // initialize our modules
 var io               = require("socket.io")(server),
     sessionStore     = require('awesomeSessionStore'), // find a working session store (have a look at the readme)
-    passportSocketIo = require("passport.socketio");
+    passportSocketIo = require("passport.primus");
 
 // With Socket.io < 1.0
 io.set('authorization', passportSocketIo.authorize({
@@ -70,7 +73,7 @@ function onAuthorizeFail(data, message, error, accept){
 }
 ```
 
-## passport.socketio - Options
+## passport.primus - Options
 
 ### `store` [function] **required**:
 *Always* provide one. If you don't know what sessionStore to use, have a look at [this list](https://github.com/senchalabs/connect/wiki#session-stores).
@@ -90,7 +93,7 @@ app.use(session({
   secret: 'keyboard cat'
 }));
 
-//in your passport.socketio setup
+//in your passport.primus setup
 //With Socket.io >= 1.0 (you will have the same setup for Socket.io <1)
 io.use(passportSocketIo.authorize({
   cookieParser: cookieParser,
