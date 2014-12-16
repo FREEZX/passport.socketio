@@ -1,5 +1,5 @@
 {
-  "name": "passport.socketio",
+  "name": "passport.primus",
   "version": "3.4.1",
   "description": "access passport.js authenticated user information from socket.io",
   "main": "lib/index.js",
@@ -9,12 +9,12 @@
     "passport"
   ],
   "author": {
-    "name": "José F. Romaniello",
-    "email": "jfromaniello@gmail.com"
+    "name": "Kristijan Trajkovski",
+    "email": "trajkovski.kiko@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jfromaniello/passport.socketio.git"
+    "url": "https://github.com/FREEZX/passport.socketio.git"
   },
   "scripts": {
     "test": "mocha"
